@@ -17,7 +17,7 @@ tests = TestList [
     TestCase (assertEqual "Test 2b" 4613732 (P2.solution 4000000)),
     TestCase (assertEqual "Test 4a" 906609 (P4.solution)),
     TestCase (assertEqual "Test 5a" (Just 2520) (P5.solution 10)),
-    TestCase (assertEqual "Test 5b" (Just 232792560) (P5.solution 20))
+    TestCase (assertEqual "Test 5b" (Just 232792560) (P5.solution 20)),
     TestCase (assertEqual "Test 6a" 2640 (P6.solution 10)),
     TestCase (assertEqual "Test 6b" 25164150 (P6.solution 100))
     ]

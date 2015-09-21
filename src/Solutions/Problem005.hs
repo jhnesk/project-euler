@@ -13,7 +13,7 @@ module Solutions.Problem005 where
 import Data.List(find)
 
 -- |
-solution n = find (divisibleByAll [1..n]) [n..]
+solution n = find (divisibleByAll [n,n-1..1]) [n,n*2..]
     where
         divisibleByAll [] n = True
         divisibleByAll (x:xs) n = n `mod` x == 0 && divisibleByAll xs n
