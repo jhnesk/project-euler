@@ -9,6 +9,7 @@ import Solutions.Problem005 as P5
 import Solutions.Problem006 as P6
 import Solutions.Problem007 as P7
 import Solutions.Problem008 as P8
+import Solutions.Problem010 as P10
 
 main = do
     args <- getArgs
@@ -23,4 +24,5 @@ main = do
         solution "6" = show (P6.solution 100)
         solution "7" = show (P7.solution 10001)
         solution "8" = show (P8.solution 13)
+        solution "10" = show (P10.solution 2000000)
         solution x   = "No solution found"
