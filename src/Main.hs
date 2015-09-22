@@ -6,6 +6,7 @@ import Solutions.Problem004 as P4
 import Solutions.Problem005 as P5
 import Solutions.Problem006 as P6
 import Solutions.Problem007 as P7
+import Solutions.Problem008 as P8
 
 main = do
     print (P1.solution 1000)
@@ -15,4 +16,5 @@ main = do
     print (P5.solution 20)
     print (P6.solution 100)
     print (P7.solution 10001)
+    print (P8.solution 13)
 
