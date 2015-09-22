@@ -1,4 +1,6 @@
 module Main where
+
+import System.Environment(getArgs)
 import Solutions.Problem001 as P1
 import Solutions.Problem002 as P2
 import Solutions.Problem003 as P3
@@ -9,12 +11,16 @@ import Solutions.Problem007 as P7
 import Solutions.Problem008 as P8
 
 main = do
-    print (P1.solution 1000)
-    print (P2.solution 4000000)
-    print (P3.solution 600851475143)
-    print (P4.solution)
-    print (P5.solution 20)
-    print (P6.solution 100)
-    print (P7.solution 10001)
-    print (P8.solution 13)
-
+    args <- getArgs
+    let p = head args
+    print (solution p)
+    where
+        solution "1" = show (P1.solution 1000)
+        solution "2" = show (P2.solution 4000000)
+        solution "3" = show (P3.solution 600851475143)
+        solution "4" = show (P4.solution)
+        solution "5" = show (P5.solution 20)
+        solution "6" = show (P6.solution 100)
+        solution "7" = show (P7.solution 10001)
+        solution "8" = show (P8.solution 13)
+        solution x   = "No solution found"
