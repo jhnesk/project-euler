@@ -17,6 +17,7 @@ import Solutions.Problem010 as P10
 import Solutions.Problem013 as P13
 import Solutions.Problem016 as P16
 import Solutions.Problem020 as P20
+import Solutions.Problem025 as P25
 
 tests = TestList [
     TestCase (assertEqual "Test 1a" 23 (P1.solution 10)),
@@ -42,7 +43,9 @@ tests = TestList [
     TestCase (assertEqual "Test 16a" 26 (P16.solution 15)),
     TestCase (assertEqual "Test 16b" 1366 (P16.solution 1000)),
     TestCase (assertEqual "Test 20a" 27 (P20.solution 10)),
-    TestCase (assertEqual "Test 20b" 648 (P20.solution 100))
+    TestCase (assertEqual "Test 20b" 648 (P20.solution 100)),
+    TestCase (assertEqual "Test 25a" 12 (P25.solution 3)),
+    TestCase (assertEqual "Test 25b" 4782 (P25.solution 1000))
     ]
 
 main = defaultMain $ hUnitTestToTests tests
