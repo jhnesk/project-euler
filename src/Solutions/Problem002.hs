@@ -13,10 +13,8 @@ exceed four million, find the sum of the even-valued terms.
 -}
 module Solutions.Problem002 where
 
+import Utils(fibs)
+
 -- | The solution sums all element from a Fibonacci sequence filtering
 --   non even numbers up to size n.
-solution :: Int -> Int
 solution n = sum (filter even (takeWhile (<=n) fibs))
-    where
-        fibs = 1 : 1 : (zipWith (+) fibs (tail fibs))
-

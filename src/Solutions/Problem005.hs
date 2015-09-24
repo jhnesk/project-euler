@@ -10,6 +10,7 @@ What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
 -}
 module Solutions.Problem005 where
+
 import Data.List(find)
 
 -- |

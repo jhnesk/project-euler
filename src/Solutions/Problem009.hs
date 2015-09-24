@@ -3,8 +3,6 @@ Module      : $Header$
 Description : Solution to problem 9
 License     : PublicDomain
 
-A palindromic number reads the same both ways. The largest palindrome
-
 A Pythagorean triplet is a set of three natural numbers, a < b < c,
 for which, a^2 + b^2 = c^2
 

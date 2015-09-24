@@ -11,5 +11,5 @@ module Solutions.Problem003 where
 
 import Data.Numbers.Primes(primeFactors)
 
-solution n = maximum (primeFactors n)
+solution n = maximum $ primeFactors n
 

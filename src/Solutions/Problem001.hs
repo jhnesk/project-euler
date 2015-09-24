@@ -12,8 +12,7 @@ module Solutions.Problem001 where
 
 -- | The solution sums all numbers in the list of natural numbers below n
 --   filtered by divisibility for 3 and 5.
-solution :: Int -> Int
-solution n = sum (filter condition [0..n-1])
+solution n = sum $ filter condition [0..n-1]
     where
         condition x = x `mod` 3 == 0 || x `mod` 5 == 0
 
