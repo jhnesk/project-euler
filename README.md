@@ -6,6 +6,8 @@ This is done mostly for fun and to learn Haskell.
 
 <https://projecteuler.net>
 
+![Solved](https://projecteuler.net/profile/jhnesk.png)
+
 As publishing solutions is discouraged I will only publish solutions
 for the first few, more or less trivial, problems. Solutions to these
 are available from a wide range of sources and mine are probably far
