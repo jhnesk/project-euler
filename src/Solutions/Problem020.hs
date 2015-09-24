@@ -12,10 +12,9 @@ Find the sum of the digits in the number 100!
 -}
 module Solutions.Problem020 where
 
-import Data.Digits(digits)
+import Utils(digitSum)
 
 solution n = digitSum $ factorial n
     where
-        digitSum n = sum $ digits 10 n
         factorial 0 = 1
         factorial n = n * factorial (n-1)
