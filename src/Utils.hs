@@ -1,6 +1,6 @@
 {- |
 Module      : $Header$
-Description : Solution to problem 16
+Description : Various utility functions
 License     : PublicDomain
 
 -}
@@ -10,13 +10,17 @@ import Data.Digits(digits)
 import Data.List(maximumBy)
 import Data.Ord(comparing)
 
-digitSum n = sum $ digits 10 n
+digitSum :: Integral n => n -> n
+digitSum = sum . digits 10
 
-digitLength n = length $ digits 10 n
+digitLength :: Integral n => n -> Int
+digitLength = length . digits 10
 
+fibs :: Integral int => [int]
 fibs = 1 : 1 : (zipWith (+) fibs (tail fibs))
 
-isPalindrome x = (show x) == reverse (show x)
+isPalindrome :: Show a => a -> Bool
+isPalindrome a = (show a) == reverse (show a)
 
 maxIndex :: Ord a => [a] -> Int
 maxIndex = fst . maximumBy (comparing snd) . zip [0..]
