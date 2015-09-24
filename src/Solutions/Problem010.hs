@@ -1,4 +1,7 @@
-{- | Problem 10
+{- |
+Module      : $Header$
+Description : Solution to problem 10
+License     : PublicDomain
 
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 

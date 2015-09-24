@@ -1,4 +1,9 @@
-{- | Problem 8
+{- |
+Module      : $Header$
+Description : Solution to problem 8
+License     : PublicDomain
+
+A palindromic number reads the same both ways. The largest palindrome
 
 The four adjacent digits in the 1000-digit number that have the greatest
 product are 9 × 9 × 8 × 9 = 5832.

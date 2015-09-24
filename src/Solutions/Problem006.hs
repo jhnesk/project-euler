@@ -1,4 +1,9 @@
-{- | Problem 6
+{- |
+Module      : $Header$
+Description : Solution to problem 6
+License     : PublicDomain
+
+A palindromic number reads the same both ways. The largest palindrome
 
 The sum of the squares of the first ten natural numbers is,
 12 + 22 + ... + 102 = 385
