@@ -15,6 +15,7 @@ import Solutions.Problem013 as P13
 import Solutions.Problem014 as P14
 import Solutions.Problem016 as P16
 import Solutions.Problem020 as P20
+import Solutions.Problem021 as P21
 import Solutions.Problem025 as P25
 
 main = do
@@ -36,5 +37,6 @@ main = do
         solution "14" = show (P14.solution 1000000)
         solution "16" = show (P16.solution 1000)
         solution "20" = show (P20.solution 100)
+        solution "21" = show (P21.solution 10000)
         solution "25" = show (P25.solution 1000)
         solution x   = "No solution found"

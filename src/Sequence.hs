@@ -36,3 +36,13 @@ pentagons = [div (n * (3 * n - 1)) 2 | n <- [1..]]
 -- | Hexagonal numbers
 hexagons :: Integral int => [int]
 hexagons = [n * (2 * n -1) | n <- [1..]]
+
+-- | Divisors of n
+divisors :: Integral int => int -> [int]
+divisors n = filter (\x -> mod n x == 0) [1..(div n 2)]
+
+-- | Amicable numbers
+amicables :: Integral int => [int]
+amicables = [a | a <- [1..], let b = dsum a, not (a == b), dsum b == a]
+    where dsum = sum . divisors
+
