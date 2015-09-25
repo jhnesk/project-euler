@@ -13,6 +13,6 @@ Find the sum of the digits in the number 100!
 module Solutions.Problem020 where
 
 import Utils(digitSum)
-import Utils(factorial)
+import Sequence(factorial)
 
-solution n = digitSum $ factorial n
+solution n = digitSum $ factorial !! n

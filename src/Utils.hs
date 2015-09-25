@@ -22,7 +22,3 @@ isPalindrome a = (show a) == reverse (show a)
 maxIndex :: Ord a => [a] -> Int
 maxIndex = fst . maximumBy (comparing snd) . zip [0..]
 
-factorial :: Integral n => n -> n
-factorial 0 = 1
-factorial n = n * factorial (n-1)
-

@@ -17,6 +17,10 @@ collatz n
     | odd n  = n : collatz (3*n+1)
     | even n = n : collatz (div n 2)
 
+-- | Factorial sequence
+factorial :: Integral int => [int]
+factorial = scanl (*) 1 [2..]
+
 -- | Square numbers
 squares :: Integral int => [int]
 squares = [n^2 | n <- [1..]]
