@@ -12,4 +12,4 @@ module Solutions.Problem007 where
 
 import Data.Numbers.Primes(primes)
 
-solution n = last (take n primes)
+solution n = primes !! (n-1)
