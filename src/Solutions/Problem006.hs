@@ -17,7 +17,8 @@ hundred natural numbers and the square of the sum.
 -}
 module Solutions.Problem006 where
 
+import Sequence(squares)
+
 solution :: Int -> Int
-solution n = (sum [1..n])^2 - sum (squares n)
-    where
-        squares n = [x^2 | x <- [1..n]]
+solution n = (sum [1..n])^2 - sum (take n squares)
+
