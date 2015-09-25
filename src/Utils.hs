@@ -16,11 +16,13 @@ digitSum = sum . digits 10
 digitLength :: Integral n => n -> Int
 digitLength = length . digits 10
 
-fibs :: Integral int => [int]
-fibs = 1 : 1 : (zipWith (+) fibs (tail fibs))
-
 isPalindrome :: Show a => a -> Bool
 isPalindrome a = (show a) == reverse (show a)
 
 maxIndex :: Ord a => [a] -> Int
 maxIndex = fst . maximumBy (comparing snd) . zip [0..]
+
+factorial :: Integral n => n -> n
+factorial 0 = 1
+factorial n = n * factorial (n-1)
+

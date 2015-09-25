@@ -23,12 +23,8 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 -}
 module Solutions.Problem014(solution) where
 
+import Sequence(collatz)
 import Utils(maxIndex)
-
-collatz n
-    | n == 1 = [n]
-    | odd n  = n : collatz (3*n+1)
-    | even n = n : collatz (div n 2)
 
 solution n = 2 + (maxIndex $ map length [collatz x | x <- [2..n-1]])
 

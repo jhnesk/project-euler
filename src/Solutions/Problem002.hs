@@ -13,7 +13,7 @@ exceed four million, find the sum of the even-valued terms.
 -}
 module Solutions.Problem002 where
 
-import Utils(fibs)
+import Sequence(fibs)
 
 -- | The solution sums all element from a Fibonacci sequence filtering
 --   non even numbers up to size n.
