@@ -15,4 +15,5 @@ module Solutions.Problem020 where
 import Utils(digitSum)
 import Sequence(factorial)
 
-solution n = digitSum $ factorial !! (n-1)
+solution n = digitSum $ factorial !! n
+

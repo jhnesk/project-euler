@@ -19,7 +19,7 @@ collatz n
 
 -- | Factorial sequence
 factorial :: Integral int => [int]
-factorial = scanl (*) 1 [2..]
+factorial = 1 : scanl (*) 1 [2..]
 
 -- | Square numbers
 squares :: Integral int => [int]
