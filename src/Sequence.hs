@@ -50,3 +50,7 @@ amicables :: Integral int => [int]
 amicables = [a | a <- [1..], let b = dsum a, not (a == b), dsum b == a]
     where dsum = sum . divisors
 
+-- | Self powers
+selfPowers :: Integral int => [int]
+selfPowers = [n^n | n <- [1..]]
+
