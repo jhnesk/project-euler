@@ -13,6 +13,6 @@ exceed four million, find the sum of the even-valued terms.
 -}
 module Solutions.Problem002 where
 
-import Sequence(fibs)
+import Sequences(fibs)
 
 solution n = sum $ takeWhile (<=n) [x | x <- fibs, even x]

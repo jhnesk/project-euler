@@ -11,7 +11,7 @@ How many such routes are there through a 20×20 grid?
 -}
 module Solutions.Problem015 where
 
-import Sequence(factorial)
+import Sequences(factorial)
 
 solution n = div (factorial !! (n*2)) ((factorial !! n) ^ 2)
 

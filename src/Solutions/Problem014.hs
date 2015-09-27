@@ -23,7 +23,7 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 -}
 module Solutions.Problem014(solution) where
 
-import Sequence(collatz)
+import Sequences(collatz)
 import Utils(maxIndex)
 
 solution n = 2 + (maxIndex $ map length [collatz x | x <- [2..n-1]])

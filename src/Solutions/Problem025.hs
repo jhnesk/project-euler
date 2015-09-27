@@ -28,7 +28,7 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 -}
 module Solutions.Problem025 where
 
-import Sequence(fibs)
+import Sequences(fibs)
 import Utils(digitLength)
 
 solution n = 1 + ( length $ takeWhile (\x -> digitLength x < n) fibs)

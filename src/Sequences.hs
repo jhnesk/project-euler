@@ -1,10 +1,11 @@
 {- |
 Module      : $Header$
-Description : Definition of various sets
+Description : Definition of various sets and sequences
 License     : PublicDomain
-
 -}
-module Sequence where
+module Sequences where
+
+import Formulae
 
 -- | Fibonacci sequence
 fibs :: Integral int => [int]
@@ -27,7 +28,7 @@ squares = [n^2 | n <- [1..]]
 
 -- | Triangle numbers
 triangles :: Integral int => [int]
-triangles = [div (n * (n+1)) 2 | n <- [1..]]
+triangles = [triangle n | n <- [1..]]
 
 -- | Cube numbers
 cubes :: Integral int => [int]
@@ -35,11 +36,11 @@ cubes = [n^3 | n <- [1..]]
 
 -- | Pentagon numbers
 pentagons :: Integral int => [int]
-pentagons = [div (n * (3 * n - 1)) 2 | n <- [1..]]
+pentagons = [pentagon n | n <- [1..]]
 
 -- | Hexagonal numbers
 hexagons :: Integral int => [int]
-hexagons = [n * (2 * n -1) | n <- [1..]]
+hexagons = [hexagon n | n <- [1..]]
 
 -- | Divisors of n
 divisors :: Integral int => int -> [int]

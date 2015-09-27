@@ -13,7 +13,7 @@ Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 module Solutions.Problem034 where
 
 import Data.Digits(digits)
-import Sequence(factorial)
+import Sequences(factorial)
 
 solution = sum $ filter f [10..100000]
     where
