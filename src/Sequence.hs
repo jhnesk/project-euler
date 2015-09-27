@@ -43,7 +43,7 @@ hexagons = [n * (2 * n -1) | n <- [1..]]
 
 -- | Divisors of n
 divisors :: Integral int => int -> [int]
-divisors n = filter (\x -> mod n x == 0) [1..(div n 2)]
+divisors n = [x | x <- [1..(div n 2)], mod n x == 0]
 
 -- | Amicable numbers
 amicables :: Integral int => [int]

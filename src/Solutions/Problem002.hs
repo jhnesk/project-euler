@@ -15,6 +15,4 @@ module Solutions.Problem002 where
 
 import Sequence(fibs)
 
--- | The solution sums all element from a Fibonacci sequence filtering
---   non even numbers up to size n.
-solution n = sum (filter even (takeWhile (<=n) fibs))
+solution n = sum $ takeWhile (<=n) [x | x <- fibs, even x]

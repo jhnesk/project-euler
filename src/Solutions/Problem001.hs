@@ -10,9 +10,5 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 -}
 module Solutions.Problem001 where
 
--- | The solution sums all numbers in the list of natural numbers below n
---   filtered by divisibility for 3 and 5.
-solution n = sum $ filter condition [0..n-1]
-    where
-        condition x = x `mod` 3 == 0 || x `mod` 5 == 0
+solution n = sum [x | x <- [1..n-1], mod x 3 == 0 || mod x 5 == 0]
 
