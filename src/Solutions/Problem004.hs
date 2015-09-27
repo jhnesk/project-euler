@@ -12,9 +12,4 @@ module Solutions.Problem004 where
 
 import Utils(isPalindrome)
 
--- | Take two lists of all 3-digit numbers and multiply the elements.
---   Filter for numbers that is the same string backwards and return
---   the maximum value.
-solution = maximum $ filter isPalindrome $ product [100..999] [100..999]
-   where
-        product xs ys = [x*y | x <- xs, y <-ys]
+solution = maximum [x*y | x <- [100..999], y <- [100..999], isPalindrome (x*y)]
