@@ -22,6 +22,7 @@ import Solutions.Problem020 as P20
 import Solutions.Problem021 as P21
 import Solutions.Problem025 as P25
 import Solutions.Problem034 as P34
+import Solutions.Problem040 as P40
 import Solutions.Problem048 as P48
 
 tests = TestList [
@@ -59,6 +60,7 @@ tests = TestList [
     TestCase (assertEqual "Test 25a" 12 (P25.solution 3)),
     TestCase (assertEqual "Test 25b" 4782 (P25.solution 1000)),
     TestCase (assertEqual "Test 34" 40730 (P34.solution)),
+    TestCase (assertEqual "Test 40" 210 (P40.solution)),
     TestCase (assertEqual "Test 48a" 405071317 (P48.solution 10)),
     TestCase (assertEqual "Test 48b" 9110846700 (P48.solution 1000))
     ]

@@ -5,6 +5,7 @@ License     : PublicDomain
 -}
 module Sequences where
 
+import Data.Digits(digits)
 import Formulae
 
 -- | Fibonacci sequence
@@ -54,4 +55,8 @@ amicables = [a | a <- [1..], let b = dsum a, not (a == b), dsum b == a]
 -- | Self powers
 selfPowers :: Integral int => [int]
 selfPowers = [n^n | n <- [1..]]
+
+-- | Champernowne word
+champernowne :: Integral int => [int]
+champernowne = concat $ map (digits 10) [1..]
 
