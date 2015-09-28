@@ -47,6 +47,11 @@ hexagons = [hexagon n | n <- [1..]]
 divisors :: Integral int => int -> [int]
 divisors n = [x | x <- [1..(div n 2)], mod n x == 0]
 
+-- | Factors of n
+factors :: Integral int => int -> [int]
+factors n = lows ++ (reverse $ map (div n) lows)
+    where lows = filter ((== 0) . mod n) [1..truncate . sqrt $ fromIntegral n]
+
 -- | Amicable numbers
 amicables :: Integral int => [int]
 amicables = [a | a <- [1..], let b = dsum a, not (a == b), dsum b == a]
