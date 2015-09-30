@@ -65,3 +65,11 @@ selfPowers = [n^n | n <- [1..]]
 champernowne :: Integral int => [int]
 champernowne = concat $ map (digits 10) [1..]
 
+-- | Cartesian product
+cartesianProduct :: [a] -> [a] -> [(a,a)]
+cartesianProduct (x:xs) (y:ys) = [(a,b) | a <- (x:xs), b <- (y:ys)]
+
+-- | Cartesian square
+cartesianSquare :: [a] -> [(a,a)]
+cartesianSquare (x:xs) = cartesianProduct (x:xs) (x:xs)
+

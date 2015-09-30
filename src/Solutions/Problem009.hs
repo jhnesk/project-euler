@@ -11,23 +11,21 @@ For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 -}
-module Solutions.Problem009(solution) where
+module Solutions.Problem009 where
 
-pairs n = [(a,b) | a <- [1..n], b <- [1..n]]
+import Utils(isPythagoran)
+import Utils(tripletSum)
+import Utils(tripletProduct)
+import Sequences(cartesianSquare)
+import Data.List(find)
+import Data.Maybe(fromMaybe)
 
 triplets []         = []
-triplets ((a,b):xs) = pythagoran (a,b,findC (a,b)) ++ triplets(xs)
-
-pythagoran (a,b,c) = if a^2+b^2==c^2 then [(a,b,c)] else []
+triplets ((a,b):xs) = filter isPythagoran [(a,b,findC (a,b))] ++ triplets(xs)
 
 findC (a,b) = last $ takeWhile (\c -> c^2 <= (a^2 + b^2)) [1..]
 
-tripletSum (a,b,c) = a+b+c
+firstMatchingSum l n = fromMaybe (0,0,0) (find (\x -> tripletSum x == n) l)
 
-tripletProduct (a,b,c) = a*b*c
-
-firstMatchingSum l n = head $ filter (\x -> tripletSum x == n) l
-
-solution :: Int -> Int
-solution n = tripletProduct $ firstMatchingSum (triplets $ pairs n) n
+solution n = tripletProduct $ firstMatchingSum (triplets $ (cartesianSquare [1..n])) n
 
