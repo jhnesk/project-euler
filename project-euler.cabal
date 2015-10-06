@@ -6,7 +6,7 @@ version:             0.1.0.0
 -- synopsis:            
 -- description:         
 license:             PublicDomain
-license-file:        LICENSE
+license-file:        UNLICENSE
 author:              Johan Ask
 maintainer:          jhnesk@gmail.com
 -- copyright:           
@@ -19,7 +19,7 @@ executable project-euler
   -- other-modules:       
   -- other-extensions:    
   build-depends:
-                       base >=4.8 && <4.9,
+                       base,
                        primes,
                        digits
   hs-source-dirs:      src
