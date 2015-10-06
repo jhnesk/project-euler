@@ -16,4 +16,4 @@ from the best.
 License
 =======
 
-Everything is released into the public domain.
+Released into the public domain
