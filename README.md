@@ -6,7 +6,7 @@ Project Euler
 Solutions to Project Euler problems written in Haskell.
 This is done mostly for fun and to learn Haskell.
 
-<https://projecteuler.net>
+<https://projecteuler.net/>
 
 ![Solved](https://projecteuler.net/profile/jhnesk.png)
 
@@ -16,6 +16,7 @@ are available from a wide range of sources and mine are probably far
 from the best.
 
 License
-=======
+-------
 
-Released into the public domain
+Released into the public domain.
+See <http://unlicense.org/>
